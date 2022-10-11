@@ -1,0 +1,25 @@
+
+
+<ng-container *ngIf="tweets_array.length >=1">
+    <div class="list-group mt-1" *ngFor="let e_tweet of tweets_array;let i = index "  >
+        
+        <div class="row" *ngIf="i % 2 == 0">
+            <div class="col-sm-4" >
+                <a href="#" class="list-group-item border-0 bg-of-tweets" aria-current="true">
+                    <p class="mb-1">{{e_tweet.tweet}}</p>
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="row" *ngIf="i % 2 != 0">
+            <div class="col-sm-4" >
+                <a href="#" class="list-group-item border-0 " aria-current="true">
+                    <p class="mb-1">{{e_tweet.tweet}}</p>
+                </a>
+            </div>
+            
+        </div>
+
+    </div>
+</ng-container>

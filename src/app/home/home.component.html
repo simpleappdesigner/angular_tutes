@@ -1,0 +1,25 @@
+<ng-template appPlaceHolder> </ng-template>
+<h1>Home Page</h1>
+<hr>
+<button class="btn btn-primary" (click)="onLoadServers()">
+Load Servers
+</button>
+<div>
+    <hr>
+</div>
+<button class="bn btn-primary" (click)="showAlertMessage()">Show Alert using ngIf</button>
+
+<app-alert [message]="'no error'" *ngIf="loadAlert" (close)="closeAlertbox()"></app-alert>
+
+<div>
+    <hr>
+</div>
+
+<button class="btn btn-primary" (click)="showAlertPGM('error message')"> 
+    component via pgm</button>
+
+<app-extracttweets></app-extracttweets>
+<hr>
+
+<app-forms-template-drive></app-forms-template-drive>
+
